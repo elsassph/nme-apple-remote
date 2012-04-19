@@ -5,9 +5,9 @@ interact with the Apple Remote Control.
 
 **Usage**
 
-Add reference in your .nmml:
+Reference the extension in your .nmml:
 
-    <extension name="appleRemote" path="../Extension" />
+    <extension name="appleRemote" path="path/to/nme-apple-remote/Extension" />
 
 Add a listener in your code:
 
@@ -16,7 +16,7 @@ Add a listener in your code:
     AppleRemote.setEventHandler(onRemote);
     ...
     private function onRemote(e) {
-	received(e);
+        trace("received " + e);
     }
 
 
