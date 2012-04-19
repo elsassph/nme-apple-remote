@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<app title="Apple Remote Extension Test" file="AppleRemoteExtensionTest" 
+		main="org.haxenme.appleRemote.ExtensionTest" package="org.haxenme.appleRemote" 
+		version="1.0.0" icon="Assets/nme.svg" company="Philippe Elsass" />
+	
+	<window width="640" height="480" fps="30" orientation="portrait" resizable="true" />
+ 	
+	<set name="BUILD_DIR" value="Export" />
+	
+	<classpath name="Source" />
+	
+	<haxelib name="nme" />
+	
+	<assets path="Assets" rename="assets" include="*" exclude="nme.svg" />
+	
+	<ndll name="std" />
+	<ndll name="regexp" />
+	<ndll name="zlib" />
+	<ndll name="nme" haxelib="nme" />
+	
+	<extension name="appleRemote" path="../Extension" />
+	
+	<setenv name="HXCPP_LOAD_DEBUG" value="1" />
+	
+</project>
