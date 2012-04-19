@@ -32,12 +32,12 @@ class ExtensionTest extends Sprite
 		label.text = lines.join("\n");
 	}
 
-	private function onRemote(e:Dynamic):Void
+	private function onRemote(e)
 	{
 		appendText("" + e);
 	}
 	
-	private function init():Void 
+	private function init()
 	{
 		lines = [];
 
@@ -53,7 +53,7 @@ class ExtensionTest extends Sprite
 	}
 	
 	// Entry point
-	public static function main () 
+	public static function main() 
 	{		
 		Lib.current.stage.align = StageAlign.TOP_LEFT;
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;

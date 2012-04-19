@@ -3,6 +3,28 @@
 This is a native extension for haxe NME, allowing Mac applications to easily 
 interact with the Apple Remote Control.
 
+**Usage**
+
+Add reference in your .nmml:
+
+    <extension name="appleRemote" path="../Extension" />
+
+Add a listener in your code:
+
+    import nme.peripherals.AppleRemote;
+    ...
+    AppleRemote.setEventHandler(onRemote);
+    ...
+    private function onRemote(e) {
+	received(e);
+    }
+
+
+**Recompilation**
+
+    cd Extension/project
+    haxelib run hxcpp Build.xml
+
 **License:**
 
 This extension and example license:
