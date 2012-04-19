@@ -19,8 +19,12 @@ Add a listener in your code:
         trace("received " + e);
     }
 
+**Running the test application**
 
-**Recompilation**
+    cd Project
+    nme test ExtensionTest.nmml cpp
+
+**Recompiling the extension**
 
     cd Extension/project
     haxelib run hxcpp Build.xml
