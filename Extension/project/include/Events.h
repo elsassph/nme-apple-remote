@@ -2,9 +2,9 @@
 #define Events_H_
 
 enum EventType {
-   etUnknown,                   // 0
-   etAPPLE_REMOTE_KEY_DOWN,     // 1
-   etAPPLE_REMOTE_KEY_UP        // 2
+	etUnknown,                   // 0
+	etAPPLE_REMOTE_KEY_DOWN,     // 1
+	etAPPLE_REMOTE_KEY_UP        // 2
 };
 
 struct Event {

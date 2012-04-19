@@ -32,14 +32,14 @@ extern "C" {
 	// event dispatcher
 	void remote_send_event(Event &inEvent) 
 	{
-        value o = alloc_empty_object();
-        alloc_field(o,val_id("type"),alloc_int(inEvent.type));
-        alloc_field(o,val_id("code"),alloc_int(inEvent.code));
-        alloc_field(o,val_id("value"),alloc_int(inEvent.value));
-        alloc_field(o,val_id("data"),alloc_string(inEvent.data));
-        
-        val_call1(remote_handler->get(),o);
-    }
+		value o = alloc_empty_object();
+		alloc_field(o,val_id("type"),alloc_int(inEvent.type));
+		alloc_field(o,val_id("code"),alloc_int(inEvent.code));
+		alloc_field(o,val_id("value"),alloc_int(inEvent.value));
+		alloc_field(o,val_id("data"),alloc_string(inEvent.data));
+		
+		val_call1(remote_handler->get(),o);
+	}
 }
 
 /* 
@@ -56,10 +56,10 @@ static value remote_set_handler(value onEvent)
 	}
 	else 
 	{
-    	remote_handler = new AutoGCRoot(onEvent);
-    	StartConnector();
-    }
-    return alloc_bool(true);
+		remote_handler = new AutoGCRoot(onEvent);
+		StartConnector();
+	}
+	return alloc_bool(true);
 }
 DEFINE_PRIM(remote_set_handler,1);
 

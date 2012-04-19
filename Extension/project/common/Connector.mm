@@ -17,9 +17,9 @@ extern "C" void remote_send_event(Event &inEvent);
 
 -(id)init
 {
-    if (self = [super init])
-    {
-        AppleRemote* newRemoteControl = [[[AppleRemote alloc] initWithDelegate: self] autorelease];
+	if (self = [super init])
+	{
+		AppleRemote* newRemoteControl = [[[AppleRemote alloc] initWithDelegate: self] autorelease];
 		[newRemoteControl setDelegate: self];
 
 		/*remoteBehavior = [MultiClickRemoteBehavior new];		
@@ -27,8 +27,8 @@ extern "C" void remote_send_event(Event &inEvent);
 		[newRemoteControl setDelegate: remoteBehavior];*/
 
 		remoteControl = [newRemoteControl retain];
-    }
-    return self;
+	}
+	return self;
 }
 
 -(void) startListening
@@ -43,8 +43,8 @@ extern "C" void remote_send_event(Event &inEvent);
 
 // delegate method for the AppleRemote
 -(void) sendRemoteButtonEvent: (RemoteControlEventIdentifier) event 
-                   pressedDown: (BOOL) pressedDown 
-                 remoteControl: (RemoteControl*) remoteControl 
+				   pressedDown: (BOOL) pressedDown 
+				 remoteControl: (RemoteControl*) remoteControl 
 {
 	NSString* buttonName = nil;
 	NSString* pressed = pressedDown ? @"(pressed)" : @"(released)";
@@ -104,8 +104,8 @@ extern "C" void remote_send_event(Event &inEvent);
 
 // delegate method for the MultiClickRemoteBehavior
 /*- (void) remoteButton: (RemoteControlEventIdentifier)buttonIdentifier 
-          pressedDown: (BOOL) pressedDown 
-           clickCount: (unsigned int)clickCount
+		  pressedDown: (BOOL) pressedDown 
+		   clickCount: (unsigned int)clickCount
 {
 }*/
 
